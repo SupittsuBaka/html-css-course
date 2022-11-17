@@ -1,0 +1,77 @@
+/* HTML code for test
+<div class="container">
+    <div class="task-container">
+        <p class="task-button">
+            Task 1
+        </p>
+        <div class="task">
+            <p>
+                the quick brown fox jumps over the lazy dog
+            </p>
+            <p>
+                THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+            </p>
+        </div>
+    </div>
+</div> 
+*/
+
+.container {
+    background-color: rgb(124, 222, 255);
+    padding: 50px;
+}
+
+.task-container {
+    max-width: 75px;
+}
+
+.task-button {
+    background-color: rgb(255, 255, 255);
+    font-family: Consolas;
+    font-weight: bold;
+    font-size: medium;
+    width: fit-content;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s 0.3s all linear;
+}
+
+.task {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    padding: 0px;
+
+    transition: 0.5s 0s all linear;
+}
+.task> :first-child {
+    margin-top: 0px;
+}
+.task> :last-child {
+    margin-bottom: 0px;
+}
+
+.task-container:hover .task-button {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    transition-delay: 0s;
+}
+.task-container:hover .task {
+    opacity: 1;
+    pointer-events: all;
+
+    padding: 20px;
+
+    transition-delay: 0.3s;
+}
+
+.task-container:last-of-type {
+    margin-bottom: 100px;
+}
